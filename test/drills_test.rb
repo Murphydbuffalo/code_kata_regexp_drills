@@ -9,7 +9,6 @@ describe '#valid_email?' do
     assert(valid_email?('test@test.co.uk'))
   end
   it 'does not validate an invalid email' do
-    skip
     refute(valid_email?('test'))
     refute(valid_email?('test@test'))
   end
@@ -17,16 +16,13 @@ end
 
 describe '#valid_phone_number?' do
   it 'validates a valid US phone number (10 numbers long)' do
-    skip
     assert(valid_phone_number?('1234567890'))
   end
   it 'does not validate an invalid phone number' do
-    skip
     refute(valid_phone_number?('123456789'))
     refute(valid_phone_number?('not a phone number'))
   end
   it 'validates a phone number with () and - ((123)-456-7890)' do
-    skip
     assert(valid_phone_number?('(123)-456-7890'))
     assert(valid_phone_number?('123-456-7890'))
   end
@@ -34,12 +30,10 @@ end
 
 describe '#valid_password?' do
   it 'validates a valid password (at least 1 number, no spaces and at least 8 characters long' do
-    skip
     assert(valid_password?('password30'))
     assert(valid_password?('password1'))
   end
   it 'does not validate an invalid password' do
-    skip
     refute(valid_password?('password space'))
     refute(valid_password?('pass'))
   end
