@@ -64,12 +64,10 @@ end
 
 describe '#only_numbers?' do
   it 'returns true if only digits are passed in' do
-    skip
     assert(only_numbers?('1'))
     assert(only_numbers?('123'))
   end
   it 'return false if anything other than a digit is passed in' do
-    skip
     refute(only_numbers?('a12'))
     refute(only_numbers?('abc'))
   end
@@ -77,12 +75,10 @@ end
 
 describe '#only_letters?' do
   it 'returns true if only letters are passed in' do
-    skip
     assert(only_letters?('abc'))
     assert(only_letters?('test'))
   end
   it 'returns false if anything other than a letter is passed in' do
-    skip
     refute(only_letters?('ab2'))
     refute(only_letters?('123'))
   end
@@ -90,17 +86,14 @@ end
 
 describe '#valid_social_security?' do
   it 'validates a valid social (9 numbers)' do
-    skip
     assert(valid_social_security?('123456789'))
   end
   it 'does not validate an invalid social' do
-    skip
     refute(valid_social_security?('abcd12345'))
     refute(valid_social_security?('12345678'))
     refute(valid_social_security?('123456789b'))
   end
   it 'validates a social that has dashes (123-45-6789)' do
-    skip
     assert(valid_social_security?('123-45-6789'))
   end
 end
