@@ -100,17 +100,14 @@ end
 
 describe '#valid_zipcode?' do
   it 'validates a 5 digit zip code (02111)' do
-    skip
     assert(valid_zip_code?('12345'))
     assert(valid_zip_code?('21301'))
   end
   it 'does not validate an invalid zip code' do
-    skip
     refute(valid_zip_code?('abc'))
     refute(valid_zip_code?('0123'))
   end
   it 'validates a 9 digit zip code (02111-1234)' do
-    skip
     assert(valid_zip_code?('02111-1234'))
   end
 end

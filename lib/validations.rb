@@ -29,3 +29,7 @@ end
 def valid_social_security?(number)
   number[/^([\d*]{3})(-?)([\d*]{2})(-?)([\d*]{4})$/]
 end
+
+def valid_zip_code?(code)
+  code =~ /^([\d*]{5})|([\d*]{5})(-?)([\d*]{4})$/
+end
