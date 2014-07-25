@@ -41,12 +41,10 @@ end
 
 describe '#valid_username?' do
   it 'validates a valid username (at least 1 letter, only letters, digits and underscores)' do
-    skip
     assert(valid_username?('abc123'))
     assert(valid_username?('test'))
   end
   it 'does not validate an invalid username' do
-    skip
     refute(valid_username?('123456'))
     refute(valid_username?('my_name!'))
   end
@@ -54,12 +52,10 @@ end
 
 describe '#valid_credit_card_number?' do
   it 'validates a valid credit card (13, 15 or 16 digits long, starts with a 3, 4, 5 or 6 and contains only digits' do
-    skip
     assert(valid_credit_card_number?('4111111111111111'))
     assert(valid_credit_card_number?('371449635398431'))
   end
   it 'does not validate an invalid credit card number' do
-    skip
     refute(valid_credit_card_number?('abc'))
     refute(valid_credit_card_number?('271449635398431'))
     refute(valid_credit_card_number?('51234567890123'))
